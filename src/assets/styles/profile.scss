@@ -1,0 +1,36 @@
+.profile-card-thumb {
+    width: 200px;
+    height: 200px;
+    border-radius: 2em;
+    background: #f15224;
+    padding: 1em;
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    .vic {
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
+        width: 50px;
+        opacity: .6;
+        transform: rotate(25deg);
+    }
+    .photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #ddd;
+        margin-bottom: 1em;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.regular-card {
+    width: 100%;
+    background: #09080f;
+    border-radius: 2em;
+    min-height: 100px;
+    padding: 1em;
+}

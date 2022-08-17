@@ -1,0 +1,35 @@
+.nav-button {
+    color: #fff;
+    outline: none;
+}
+.user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    // background: #2a2b31;
+    border-radius: 1em;
+    padding: 0.2em 0.5em 0.2em 0.2em;
+    cursor: pointer;
+    span {
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .user-photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #2a2b31;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-right: 0.5em;
+        img {
+            width: 100%;
+        }
+    }
+}
+

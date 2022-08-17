@@ -1,0 +1,6 @@
+<div class="player-wrapper">
+    <button class="play-btn" (click)="toggle()">
+        <i class="las la-play" *ngIf="player.paused"></i>
+        <i class="las la-pause" *ngIf="!player.paused"></i>
+    </button>
+</div>

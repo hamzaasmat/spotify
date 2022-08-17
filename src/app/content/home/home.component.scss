@@ -1,0 +1,39 @@
+.cat-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1em;
+    img {
+        width: 100%;
+        border-radius: 1em;
+        margin-bottom: 0.5em;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    span {
+        position: absolute;
+        bottom: 1em;
+        text-align: center;
+    }
+}
+
+.rel-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background: #15161a;
+    img {
+        width: 100%;
+        border-radius: 1em;
+        margin-bottom: 0.5em;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    span {
+        text-align: center;
+    }
+}

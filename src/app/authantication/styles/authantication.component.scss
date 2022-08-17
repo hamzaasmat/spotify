@@ -1,0 +1,49 @@
+.login-wrapper {
+    background: #0d0c0f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .login-btn {
+        background: red;
+    }
+
+    .login-card {
+        width: 300px;
+        min-height: 100px;
+        padding: 1em;
+        background: #15161a;
+        border-radius: 1em;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-top: -5em;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            padding: .5em 1em;
+            border-radius: 1em;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                background: #1ed660;
+                color: #000;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<!-- <div class="page-wrapper"> -->
+
+<mat-toolbar>
+    <!-- <img src="assets/images/logo.svg" width="100" alt=""> -->
+    <span class="spacer"></span>
+    <div class="user-menu" [matMenuTriggerFor]="menu">
+        <div class="user-photo">
+            <img [src]="user.images[0].url" *ngIf="user.images && user.images.length > 0" alt="">
+            <i class="las las-user" *ngIf="user.images && user.images.length == 0"></i>
+        </div>
+        <span>{{user ? user.display_name:''}}</span>
+    </div>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+</mat-toolbar>
+<div class="app-sidebar">
+    <span routerLink="home">
+        <img src="assets/images/logo.svg" width="100" alt="">
+    </span>
+    <ng-container *ngFor="let route of routeList">
+        <span [routerLink]="route.link" [routerLinkActive]="'active'" *ngIf="route.isDisabled == false">
+            <i [class]="route.icon"></i>
+        </span>
+    </ng-container>
+
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- </div> -->

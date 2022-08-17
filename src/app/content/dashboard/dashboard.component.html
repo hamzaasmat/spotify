@@ -1,0 +1,20 @@
+<form [formGroup]="formGroup" class="search-box-wrapper">
+    <input type="text" class="app-search" formControlName="appSearch" placeholder="Search...">
+    <img src="assets/images/search-icon.png" width="20" alt="">
+</form>
+
+<div class="row" *ngIf="artistsList.length > 0">
+    <div class="col-md-3 col-sm-6 col-lg-2 mt-4 animated bounceInUp" *ngFor="let artist of artistsList;let i = index"
+        [ngStyle]="{'animation-delay':(i/20)+'s' }" (click)="goForSingleArtist(artist.id)">
+        <app-music-card [data]="artist"></app-music-card>
+    </div>
+</div>
+<div class="container noData animated fadeIn" *ngIf="noRecordFound">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>No Result Found</h1>
+            <p>Try a different keyword </p>
+            <p>Search for: Arists, Tracks</p>
+        </div>
+    </div>
+</div>

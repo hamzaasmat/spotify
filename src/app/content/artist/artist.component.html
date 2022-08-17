@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-12">
+        <section class="cover" *ngIf="singleArtist">
+            <img *ngIf="singleArtist.images && singleArtist.images.length > 0" [src]="singleArtist.images[0].url" alt=""
+                class="bg">
+            <span>
+                <div class="img-box">
+                    <img [src]="singleArtist.images[0].url"
+                        *ngIf="singleArtist.images && singleArtist.images.length > 0" alt="">
+                    <img src="assets/images/placeholder-user.png"
+                        *ngIf="singleArtist.images && singleArtist.images.length == 0" alt="">
+                </div>
+            </span>
+            <span>
+                <h1 class="mb-4">{{singleArtist.name}}</h1>
+                <div class="d-flex align-items-center justify-content-start cover-info">
+                    <div class="d-flex align-items-center">
+                        <i class="las la-users f mr-2"></i>
+                        <span>{{singleArtist.followers ? singleArtist.followers.total:0}}</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="las la-fire p mr-2"></i>
+                        <span>{{singleArtist.popularity}}</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-start cover-info">
+                    <div class="gen" *ngFor="let gen of singleArtist.genres">
+                        {{gen}}
+                    </div>
+                </div>
+            </span>
+        </section>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="section-title">
+                Albums
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2" *ngFor="let item of artistAlbums">
+            <app-music-card [data]="item" [infoBar]="false"></app-music-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="section-title">
+                Top Songs
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 mb-4" *ngFor="let track of artistTopTracks" (click)="getSrc(track.preview_url)">
+            <app-music-card [data]="track" [infoBar]="false" [cardPlain]="false" [cardMusic]="true"></app-music-card>
+        </div>
+        <app-player [src]="playerSrc"></app-player>
+    </div>
+</div>

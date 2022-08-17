@@ -1,0 +1,60 @@
+.cover {
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+    .bg {
+        width: 100%;
+        opacity: .2;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        z-index: 1;
+    }
+    padding-left: 10%;
+    .img-box {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        img {
+            width: 300px;
+            height: 300px;
+            border-radius: 1em;
+        }
+    }
+    .gen {
+        padding: 0.4em 01em;
+        background: #000;
+        border-radius: 1em;
+        color: #fff;
+        margin-right: .5em;
+    }
+    span {
+        margin-right: 2em;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+    .cover-info {
+        margin-top: 4em;
+        color: #000;
+        i {
+            background: #000;
+            padding: .2em;
+            border-radius: 50%;
+            font-size: 30px;
+        }
+    }
+}
+
+.audio {
+    background: #000 !important;
+}

@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="section-title">
+                Featured Playlists
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2" *ngFor="let item of playlists">
+            <div class="rel-card">
+                <img [src]="item.images[0].url" *ngIf="item.images" width="100" alt="">
+                <!-- <span> {{item.name}}</span> -->
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="section-title">
+                New releases
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2" *ngFor="let item of releases">
+            <div class="rel-card">
+                <img [src]="item.images[0].url" *ngIf="item.images" width="100" alt="">
+                <span> {{item.name}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="section-title">
+                Browse All
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2" *ngFor="let item of categories">
+            <div class="cat-card">
+                <img [src]="item.icons[0].url" *ngIf="item.icons" width="100" alt="">
+                <span> {{item.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>

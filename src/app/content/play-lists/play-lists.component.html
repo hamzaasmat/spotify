@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="grad-card">
+                <p class="tracks">
+                    <span *ngFor="let track of likedTracks">
+                        {{' ' + track.track.name}} <div class="spot"></div>
+                    </span>
+                </p>
+                <h3>Liked Songs</h3>
+                <p>
+                    {{likedTracks.length}} liked songs
+                </p>
+            </div>
+        </div>
+        <div class="col-md-2" *ngFor="let item of savedPlaylists">
+            <div class="simple-card">
+                <img [src]="item.images[0].url" *ngIf="item.images && item.images.length > 0" width="100" alt="">
+                <img src="assets/images/music.png" *ngIf="item.images && item.images.length == 0">
+
+                <h2>{{item.name}}</h2>
+                <span>
+                    By {{item.owner.display_name}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
